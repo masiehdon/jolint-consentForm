@@ -1,9 +1,6 @@
-import { Typography } from '@mui/material';
-
+import Layout from './components/Layout';
 import './App.css'
-import Header from './pages/Header';
-import Footer from './pages/Footer';
-import Test from './pages/Test';
+
 
 
 function App() {
@@ -11,13 +8,10 @@ function App() {
 
   return (
     <>
-      <Header />
-      <Typography variant='h1'>
-        Consent Form
-      </Typography>
-    {/* <Test /> */}
-      <Footer />
-    </>
+      <Layout>
+        
+      </Layout>
+      </>
     
   )
 }
