@@ -1,5 +1,5 @@
 import { Box } from "@mui/material";
-import logo from '../../assets/logo.svg'
+import logo from '../../../public/logo.svg'
 
 export default function Header() {
 

@@ -2,6 +2,7 @@ import { Typography } from '@mui/material';
 
 import './App.css'
 import Header from './pages/Header';
+import Footer from './pages/Footer';
 
 
 function App() {
@@ -13,7 +14,9 @@ function App() {
       <Typography variant='h1'>
         Consent Form
       </Typography>
+      <Footer />
     </>
+    
   )
 }
 
