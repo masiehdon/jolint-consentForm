@@ -1,15 +1,19 @@
-import { Typography } from '@mui/material';
+import Layout from './components/Layout';
 import './App.css'
+
+
 
 function App() {
 
 
   return (
+    
     <>
-      <Typography variant='h1'>
-        Consent Form
-      </Typography>
-    </>
+      <Layout>
+        
+      </Layout>
+      </>
+    
   )
 }
 
