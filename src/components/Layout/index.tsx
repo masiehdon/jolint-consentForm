@@ -1,4 +1,5 @@
 import Footer from "../../pages/Footer";
+import { FormHeading } from "../../pages/FormHeading";
 import Header from "../../pages/Header";
 
 interface LayoutProps {
@@ -7,7 +8,8 @@ interface LayoutProps {
 export default function Layout({children}:LayoutProps )  {
   return (
       <div>
-          <Header />
+      <Header />
+      <FormHeading />
           {children}
           <Footer />
     </div>
