@@ -1,17 +1,10 @@
-import { Box, Container, Grid, Typography } from "@mui/material"
+import { Grid, Typography } from "@mui/material"
 import { useState } from "react"
 import formData from "../../data/formData";
 import { FormHeading } from "../FormHeading"
 import Boxes from "../../components/Boxes"
 import Buttons from "../../components/Buttons"
 
-// interface FormType {
-//   title: string,
-//   content: string,
-//   subContent: string,
-//   section: number,
-//   sectionsId: number
-// }
 
 export const FormContent = () => {
   const [currentPageIndex, setCurrentPageContent] = useState<number>(0) 
