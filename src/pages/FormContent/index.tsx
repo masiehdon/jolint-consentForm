@@ -1,4 +1,4 @@
-import { Grid, Typography } from "@mui/material"
+import { Box, Grid, Typography } from "@mui/material"
 import { useState } from "react"
 import formData from "../../data/formData";
 import { FormHeading } from "../FormHeading"
@@ -18,13 +18,13 @@ export const FormContent = () => {
   }
   
   return (
-    <div>
+    <Box sx={{px: 10, height: '100%', maxWidth: '100vw', overflow: 'hidden'}}>
       <FormHeading />
       
         {formData[currentPageIndex].section
           ?
-       <Grid container sx={{ px: 10 }}>  
-      <Grid item xs={12}>
+       <Grid container >  
+      <Grid item xs={12} sx={{maxWidth: '100%'}}>
             <Typography variant="h5">
               {formData[currentPageIndex].index ?
                 `${formData[currentPageIndex].index}.
@@ -41,7 +41,9 @@ export const FormContent = () => {
               {formData[currentPageIndex].subContent}
               </Typography>
             }
-            <Boxes sectionId={formData[currentPageIndex].sectionId}/>
+            <Grid item sx={{maxWidth: '100vw'}}>
+              <Boxes sectionId={formData[currentPageIndex].sectionId} />
+            </Grid>
           </Grid>
            </Grid>
            :
@@ -68,8 +70,8 @@ export const FormContent = () => {
               </Grid>
               </Grid>
        }
-          <Grid container >
-            <Grid item xs={12}>
+          <Grid container sx={{mb: 30}} >
+            <Grid item xs={12} alignItems={"center"} sx={{maxWidth: '100%'}}>
             <Buttons
         handleNextPage={handleNextPage}
         handlePreviousPage={handlePreviousPage}
@@ -77,6 +79,6 @@ export const FormContent = () => {
         </Grid>      
  </Grid>
          
-    </div>
+    </Box>
   )
 }

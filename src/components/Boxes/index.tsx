@@ -8,12 +8,12 @@ interface sectionType {
 
 const Boxes = ({ sectionId }: sectionType) => {
     return (
-      <Box sx={{ ml: 3, width: '100%'}}>
+      <Box sx={{ width: '100vw'}}>
       <Grid  container>
           <Grid item xs={12} sm={6} md={3} sx={{direction: "column", display: 'flex'}}>
           <Box
              sx={{
-        Width: '20%',
+        maxWidth: '13rem',
           minHeight: '100%',
           border: '1px black solid',
           display: 'flex',
@@ -33,7 +33,7 @@ const Boxes = ({ sectionId }: sectionType) => {
           <Grid item xs={12} sm={6} md={3} sx={{direction: "column", display: 'flex'}}>
            <Box
              sx={{
-           Width: '20%',
+          maxWidth: '13rem',
           minHeight: '100%',
           backgroundColor: sectionId && sectionId >= 2? 'none' : 'lightgrey',
           border: '1px black solid',
@@ -54,7 +54,7 @@ const Boxes = ({ sectionId }: sectionType) => {
           <Grid item xs={12} sm={6} md={3} sx={{direction: "column", display: 'flex'}}>
           <Box
              sx={{
-          Width: '20%',
+          maxWidth: '13rem',
           minHeight: '100%',
           backgroundColor: sectionId && sectionId >= 3 ? 'none' : 'lightgrey',
           border: '1px black solid',
@@ -75,7 +75,7 @@ const Boxes = ({ sectionId }: sectionType) => {
           <Grid item xs={12} sm={6} md={3} sx={{direction: "column", display: 'flex'}}>
           <Box
              sx={{
-          Width: '20%',
+          maxWidth: '13rem',
           minHeight: '100%',
           backgroundColor: sectionId && sectionId >= 4 ? 'none' : 'lightgrey',
           border: '1px black solid',
