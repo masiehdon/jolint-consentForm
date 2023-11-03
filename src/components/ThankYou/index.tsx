@@ -7,20 +7,29 @@ export default function ThankYou() {
       <Grid container sx={{display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column'}}>
           <Grid item xs={12} sx={{ display: 'flex', alignItems: 'center', mt: '8rem' }}>
               
-              <Avatar  sx={{ width: 75, height: 75 }}>
+              <Avatar  sx={{ width: 75, height: 75, m: 5 }}>
               <CheckCircleOutlineOutlinedIcon sx={{fontSize: 90, backgroundColor: 'green', size: 'xx-large'}} /> 
               </Avatar> 
               
-              <Typography variant="h1" sx={{fontSize: 'bold'}}>
+              <Typography variant="h1" sx={{
+    fontWeight: 'bold',
+    fontSize: {
+      xs:35, 
+      sm: 40, 
+      md: 50,
+      lg: 60,
+      xl: 70, 
+  }
+              }}>
                   Thank You!
               </Typography>
           </Grid>
           <Grid item xs={12}>
-              <Typography variant="h6" sx={{m: '5rem'}}>
+              <Typography variant="h6" sx={{m: '5rem', fontWeight: 'bolder'}}>
                   Your consent form was successfully submitted. We appreciate your collaboration. Thank you!
               </Typography>
           </Grid>
-          <Grid item>
+          <Grid item xs={12} sx={{mb: 15}}>
               <Button
                   variant='contained'
                   size="large"
