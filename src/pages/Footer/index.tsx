@@ -13,9 +13,9 @@ const Footer = () => {
           textAlign: 'center',
           position: 'fixed',
           bottom: 0,
-          width: '100%',
+          minWidth: '100vw',
             display: { xs: 'none', sm: 'flex' },
-          p: 2
+          p: 2,
         }}
       >
         <Grid item xs={12} sm={6}>
