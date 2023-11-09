@@ -8,7 +8,7 @@ import image__6 from '../../assets/progressBar/image__6.png'
 import image__7 from '../../assets/progressBar/image__7.png'
 import image__8 from '../../assets/progressBar/image__8.png'
 import image__9 from '../../assets/progressBar/image__9.png'
-import formData from '../../data/formData'
+import formData from '../../data/FormData/formData'
 
 
 type currentPageProps = {

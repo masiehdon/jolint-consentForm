@@ -1,8 +1,8 @@
 import { Box, Grid, Typography } from "@mui/material"
 import { useState } from "react"
-import formData from '../../data/formData';
-import { FormHeading } from "../FormHeading"
-import Boxes from "../../components/Boxes"
+import formData from '../../data/FormData/formData.ts';
+import FormHeading from "../FormHeading/index.tsx";
+import Boxes from "../../components/Boxes/index.tsx"
 import Form from "../../components/Form";
 import ThankYou from "../../components/ThankYou";
 import ButtonNext from "../../components/buttonComponents/ButtonNext";
@@ -146,6 +146,9 @@ function handleClickBox(e: React.MouseEvent) {
                   <ButtonHowItWorks />
                 </Grid>
               }
+              {formData[currentPageIndex].id == 5 && 
+              <ButtonLearnMore />
+      }
             
         </Grid>      
           </Grid>
@@ -157,8 +160,7 @@ function handleClickBox(e: React.MouseEvent) {
         <Box sx={{display: 'flex'}}>
        <ButtonPrevious handlePreviousPage={handlePreviousPage}/> 
           <ButtonLearnMore />
-          <ButtonNext handleNextPage={handleNextPage} />
-       </Box> 
+          </Box> 
       }
    
       {formData[currentPageIndex].section == 'Submit' && 
