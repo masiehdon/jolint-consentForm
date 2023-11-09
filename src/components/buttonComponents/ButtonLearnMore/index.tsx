@@ -1,20 +1,16 @@
 import { Button, Box } from "@mui/material";
 
-interface NextProps {
-  handleNextPage: () => void
-}
 
-export default function index({ handleNextPage }: NextProps) {
+export default function index() {
   return (
     <Box sx={{m: 5}}>
      
       <Button
         variant="contained"
-        onClick={handleNextPage}
-        size="large"
+         size="large"
           sx={{ background: '#2C3386', width: 175, height: 55, borderRadius: 2}}
       >
-        Next
+       Learn More
         </Button>
     
     </Box>
