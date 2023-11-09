@@ -11,11 +11,12 @@ const Footer = () => {
           bgcolor: '#2C3386',
           color: 'white',
           textAlign: 'center',
-          position: 'fixed',
+          position: 'relative',
           bottom: 0,
-          minWidth: '100vw',
+          minWidth: '100%',
             display: { xs: 'none', sm: 'flex' },
           p: 2,
+          
         }}
       >
         <Grid item xs={12} sm={6}>
