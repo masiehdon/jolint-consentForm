@@ -1,6 +1,9 @@
-import Header from './pages/Header';
-import Footer from './pages/Footer';
+
+import Layout from './components/Layout';
 import './App.css'
+import { FormContent } from './pages/FormContent';
+
+
 
 
 
@@ -8,10 +11,15 @@ function App() {
 
 
   return (
+    
     <>
-      <Header />
-      <Footer  />
-    </>
+
+      <Layout>
+        <FormContent />
+      </Layout>
+      </>
+    
+
   )
 }
 
