@@ -80,9 +80,9 @@ const formData = [
         content: 'Empower your workplace by authorizing consent for reliable data to enhance inclusion and belonging. Click on the steps below to read and access the consent form.'
     },
     {
-
-        title: 'Thank you!',
-        subContent: 'Your consent form was successfully submitted. We appreciate your collaboration. Thank you!'
+        
+        id: 'Thank',
+    
     },
     {
 

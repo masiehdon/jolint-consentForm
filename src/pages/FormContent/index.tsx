@@ -4,6 +4,8 @@ import formData from "../../data/formData";
 import { FormHeading } from "../FormHeading"
 import Boxes from "../../components/Boxes"
 import Buttons from "../../components/Buttons"
+import Form from "../../components/Form";
+import ThankYou from "../../components/ThankYou";
 
 
 export const FormContent = () => {
@@ -18,6 +20,7 @@ export const FormContent = () => {
   }
   
   return (
+    
     <Box sx={{px: 10, height: '100%', maxWidth: '100vw', overflow: 'hidden'}}>
       <FormHeading />
       
@@ -60,16 +63,21 @@ export const FormContent = () => {
               {formData[currentPageIndex].content}
             </Typography>
             <br />
+            {formData[currentPageIndex].index == 9 &&
+              <Form />}
+            
            {formData[currentPageIndex].subContent &&
               <Typography variant='body2'>
               
                 {formData[currentPageIndex].subContent}
               </Typography>
-            }
               
+            }
+            
               </Grid>
               </Grid>
-       }
+        }
+        {formData[currentPageIndex].id !== 'Thank' &&
           <Grid container sx={{mb: 30}} >
             <Grid item xs={12} alignItems={"center"} sx={{maxWidth: '100%'}}>
             <Buttons
@@ -77,8 +85,11 @@ export const FormContent = () => {
         handlePreviousPage={handlePreviousPage}
               /> 
         </Grid>      
- </Grid>
+ </Grid>}
          
+     
+      {formData[currentPageIndex].id == 'Thank' &&
+            <ThankYou />}
     </Box>
   )
 }
