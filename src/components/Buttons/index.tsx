@@ -13,24 +13,26 @@ const Buttons: React.FC<MyButtonProps> = ({ handlePreviousPage, handleNextPage }
    
   
   return (
-      <Grid container>
-          <Grid item xs={12} sx={{mt: 15, display: 'flex'}}>
+      <Grid container width={'50vw'}>
+          <Grid item xs={12} sm={6} md={6} sx={{mt: 15, display: 'flex'}}>
       <Button
         onClick={handlePreviousPage}
         variant="outlined"
         size="large"
           sx={{
-            mr: 10, ml: 10, border: '2px solid #2C3386', width: 175,
+            border: '2px solid #2C3386', width: 175, height: 55
           }}
       >
           Back
         </Button>
-        
+       </Grid>
+
+      <Grid item xs={12} sm={6} md={6} sx={{ mt: {xs: 5,sm: 15, md: 15, lg: 15}, display: 'flex'}}>
       <Button
         variant="contained"
         onClick={handleNextPage}
         size="large"
-        sx={{ background: '#2C3386',  width: 175}}
+          sx={{ background: '#2C3386', width: 175, height: 55}}
       >
         Next
         </Button>
