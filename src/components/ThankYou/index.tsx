@@ -1,13 +1,13 @@
-import { Avatar, Button, Grid, Typography } from "@mui/material";
-// import { FcApproval } from "react-icons/fc";
+import { Avatar, Grid, Typography } from "@mui/material";
 import CheckCircleOutlineOutlinedIcon from '@mui/icons-material/CheckCircleOutlineOutlined';
+import ButtonClose from "../buttonComponents/ButtonClose";
 
 export default function ThankYou() {
   return (
-      <Grid container sx={{display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column'}}>
+      <Grid container sx={{display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', mb: 25}}>
           <Grid item xs={12} sx={{ display: 'flex', alignItems: 'center', mt: '8rem' }}>
               
-              <Avatar  sx={{ width: 75, height: 75, m: 5 }}>
+              <Avatar  sx={{ width: 75, height: 75, }}>
               <CheckCircleOutlineOutlinedIcon sx={{fontSize: 90, backgroundColor: 'green', size: 'xx-large'}} /> 
               </Avatar> 
               
@@ -28,15 +28,12 @@ export default function ThankYou() {
               <Typography variant="h6" sx={{m: '5rem', fontWeight: 'bolder'}}>
                   Your consent form was successfully submitted. We appreciate your collaboration. Thank you!
               </Typography>
+              <Grid item xs={12} sx={{display: 'flex', alignItems: 'center', justifyContent: 'center'}} >
+                  <ButtonClose />
+              </Grid>
+              
           </Grid>
-          <Grid item xs={12} sx={{mb: 15}}>
-              <Button
-                  variant='contained'
-                  size="large"
-                sx={{ background: '#2C3386', width: 175, height: 55, borderRadius: 2}}>
-                  Close
-              </Button>
-          </Grid>
+         
     </Grid>
   )
 }

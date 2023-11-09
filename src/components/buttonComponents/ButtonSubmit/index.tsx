@@ -4,7 +4,7 @@ interface handleNextProps {
   handleNextPage: () => void
 }
 
-export default function index({handleNextPage: handleNextProps}) {
+export default function index({handleNextPage}: handleNextProps) {
 
     function handleSubmit() {
     handleNextPage()
@@ -12,8 +12,11 @@ export default function index({handleNextPage: handleNextProps}) {
     
   return (
       <div>
-          <Button  onSubmit={handleSubmit}
-          variant='contained' sx={{ background: '#EDEDED' }}>
+          <Button  onClick={handleSubmit}
+        variant='contained'
+        size="large"
+        sx={{ background: '#CB7CAC', width: 175, height: 55, borderRadius: 2, m: 5}}
+      >
           Submit
         </Button>
     </div>

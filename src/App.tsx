@@ -8,14 +8,9 @@ function App() {
 
 
   return (
-    
-    
-   
-      <Layout>
+    <Layout>
       <FormContent /> 
       </Layout>
-  
-    
   )
 }
 
