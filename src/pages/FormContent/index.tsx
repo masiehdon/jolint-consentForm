@@ -116,11 +116,11 @@ const handlePreviousPage = () => {
                 <Grid item xs={12}>
                   <Form />
                 </Grid>
-                  <Grid item xs={12} sm={6} md={3} alignItems={"center"} sx={{ display: 'flex', justifyContent: 'center' }}>
+                  <Grid item xs={12} sm={4} md={3} lg={2} alignItems={"center"} justifyContent={'center'} sx={{display: 'flex'}}>
                     <ButtonPrevious handlePreviousPage={handlePreviousPage} />
                     </Grid>
                     
-                  <Grid item xs={12} sm={6} md={3} alignItems={"center"} sx={{ display: 'flex', justifyContent: 'center' }}>
+                  <Grid item xs={12} sm={4} md={3} lg={2} alignItems={"center"} justifyContent={'center'} sx={{display: 'flex'}}>
                   <ButtonDone handleNextPage={handleNextPage} />
                 </Grid>
                 </Grid>
@@ -143,39 +143,44 @@ const handlePreviousPage = () => {
         formData[currentPageIndex].end !== 'Thank' &&
         formData[currentPageIndex].section !== 'Submit' && 
         formData[currentPageIndex].index !== 9 && (
-        <Grid container alignItems={"center"} sx={{ display: 'flex', justifyContent: 'center' }} >
+        
+        <Grid container>
          
-          <Grid item xs={12} sm={6} md={3} alignItems={"center"} sx={{maxWidth: '100%', justifyContent: 'center'}}>
+          <Grid item xs={12} sm={4} md={3} lg={2} alignItems={"center"} justifyContent={'center'} sx={{display: 'flex'}}>
             
             <ButtonPrevious handlePreviousPage={handlePreviousPage} />
+            </Grid>
             
-              {formData[currentPageIndex].click !== true && ( 
+            {formData[currentPageIndex].click !== true && ( 
+              <Grid item xs={12} sm={4} md={3} lg={2} alignItems={"center"} justifyContent={'center'} sx={{display: 'flex'}}>
                 <ButtonNext handleNextPage={handleNextPage} />
+                </Grid>
             )}
             
-              {formData[currentPageIndex].title == 'Personal Data' && (
+                {formData[currentPageIndex].title == 'Personal Data' && (
+                  <Grid item xs={12} sm={4} md={3} lg={2} alignItems={"center"} justifyContent={'center'} sx={{display: 'flex'}}>
                 
-                  <ButtonHowItWorks />
+                <ButtonHowItWorks />
+                </Grid>
                
             )}
             
             {formData[currentPageIndex].id == 5 &&
-            
+            <Grid item xs={12} sm={4} md={3} lg={2} alignItems={"center"} justifyContent={'center'} sx={{display: 'flex'}}>
               <ButtonLearnMore />
-             
+             </Grid>
             }
 
             </Grid>
-          </Grid>
+         
         )}
       
       {formData[currentPageIndex].sectionId == 1 && (
         <Grid container sx={{ display: 'flex' }}>
-          <Grid item xs={12} sm={6} md={3} alignItems={"center"} justifyContent={'center'} sx={{display: 'flex'}}>
+          <Grid item xs={12} sm={4} md={3} lg={2} alignItems={"center"} justifyContent={'center'} sx={{display: 'flex'}}>
             <ButtonPrevious handlePreviousPage={handlePreviousPage} /> 
           </Grid>
-          <Grid item xs={12} sm={6} md={3} alignItems={"center"}
-           sx={{ display: 'flex', justifyContent: 'center' }}>
+          <Grid item xs={12} sm={4} md={3} lg={2} alignItems={"center"} justifyContent={'center'} sx={{display: 'flex'}}>
             <ButtonLearnMore />
           </Grid>
         </Grid> 
@@ -183,10 +188,10 @@ const handlePreviousPage = () => {
 
       {formData[currentPageIndex].section == 'Submit' && (
         <Grid container sx={{bottom: 0, mb: 30 }} >
-        <Grid item xs={12} sm={6} md={3}  sx={{ display: 'flex', alignContent: 'center' }}>
+        <Grid item xs={12} sm={4} md={3} lg={2} alignItems={"center"} justifyContent={'center'} sx={{display: 'flex'}}>
             <ButtonPrevious handlePreviousPage={handlePreviousPage} /> 
           </Grid>
-          <Grid item xs={12} sm={6} md={3} alignItems={"center"} sx={{ display: 'flex' }}>
+         <Grid item xs={12} sm={4} md={3} lg={2} alignItems={"center"} justifyContent={'center'} sx={{display: 'flex'}}>
           <ButtonSubmit handleNextPage={handleNextPage} />
           </Grid>
           </Grid>
