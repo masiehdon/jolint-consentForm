@@ -19,14 +19,14 @@ const Footer = () => {
         }}
       >
         <Grid item xs={12} sm={6}>
-          <Typography variant="body2" sx={{ lineHeight: 1.5}}>
+          <Typography variant="body2" sx={{ lineHeight: 3}}>
             Jolint Network Analytics AB <br />
             Org. Nr. 559324-1770<br />
             Gothenburg, Sweden
           </Typography>
         </Grid>
         <Grid item xs={12} sm={6}>
-          <Typography variant="body2" sx={{ lineHeight: 1.5}}>
+          <Typography variant="body2" sx={{ lineHeight: 3}}>
             <LinkedInIcon /> Jolint <br />
             <MailOutlineOutlinedIcon /> hello@jolint.com
           </Typography>
@@ -49,7 +49,7 @@ const Footer = () => {
          
         }}
       >
-        <Typography variant="body2" sx={{}}>
+        <Typography variant="body2" sx={{lineHeight: 2}}>
           Copyright © 2023 Jolint | Powered by Jolint
         </Typography>
       </Grid>

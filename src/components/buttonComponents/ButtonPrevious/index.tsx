@@ -14,8 +14,7 @@ export default function index({ handlePreviousPage }: PrevProp) {
         variant="outlined"
         size="large"
           sx={{
-            border: '2px solid #2C3386', width: 175, height: 55
-          }}
+            border: '2px solid #2C3386', width: 175, height: 55, borderRadius: 2 }}
       >
           Back
         </Button>

@@ -1,41 +1,69 @@
-import { Grid, Typography } from '@mui/material';
-import CheckBoxOutlineBlankIcon from '@mui/icons-material/CheckBoxOutlineBlank';
+import { Avatar, Grid, Typography } from '@mui/material';
 import Box from '@mui/material/Box';
+import intro from '../../assets/intro.png'
+import yourRights from '../../assets/your-rights.png'
+import purpose from '../../assets/purpose.png'
+import consent from '../../assets/consent2.png'
+import CustomCheckbox1 from '../CustomCheckbox1';
+import CustomCheckbox2 from '../CustomCheckbox2';
 
-interface sectionType {
-    sectionId?: number | undefined
+
+
+interface BoxesProps {
+  sectionId: number;
+  handleClickBox: (e: React.MouseEvent) => void;
+  
 }
 
-const Boxes = ({ sectionId }: sectionType) => {
+const Boxes: React.FC<BoxesProps> = ({ sectionId, handleClickBox }) => {
+  
+      
     return (
-      <Box sx={{ width: '100vw'}}>
-      <Grid  container>
+      <Box sx={{ width: '100vw', mr: 2}}>
+            <Grid container spacing={2}>
+                
           <Grid item xs={12} sm={6} md={3} sx={{direction: "column", display: 'flex'}}>
-          <Box
+            <Box
+              id='1'
+              onClick={handleClickBox}
              sx={{
-        maxWidth: '13rem',
-          minHeight: '100%',
+          maxWidth: '20rem',
+          maxHeight: '20rem',
           border: '1px black solid',
           display: 'flex',
           alignItems: 'flex-start',
-          justifyContent: 'space-between',
-                  m: 2,
+                justifyContent: 'space-between',
+                      m: 2,
                       p: 2,
-                      boxSizing: 'border-box'
-          
-              }}>
-              <Typography >
-               Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius repudiandae perferendis deleniti libero doloribus sint sunt. Consequuntur reiciendis maxime repellendus sunt iste magnam! Dolorem alias illo, suscipit totam quos pariatur?
-              </Typography>
-              <CheckBoxOutlineBlankIcon />
+                            boxSizing: 'border-box',
+                        }}>
+                        <Box sx={{position: 'relative', left: -5, zIndex: 1 }}>
+                        <Avatar>
+                                <img src={intro} />
+                        </Avatar>      
+                        </Box>
+                        <Box sx={{ mt: 5}}>
+              <Typography variant='h4'sx={{align: 'center', mt: 5}} >
+              Introduction
+                            </Typography>
+                            <Typography variant='body2' sx={{align: 'center', mt: 10}}>
+                                Let jolint introduce themselves to you
+                            </Typography>
+                      </Box>
+                        <Box sx={{position: 'relative', left: -2 }}>
+                         {sectionId &&  sectionId >= 2 ? <CustomCheckbox1 /> : <CustomCheckbox2 />} 
+                        </Box> 
               </Box>
-          </Grid>
+                </Grid>
+                
           <Grid item xs={12} sm={6} md={3} sx={{direction: "column", display: 'flex'}}>
-           <Box
+            <Box
+              id='4'
+              onClick={handleClickBox}
              sx={{
-          maxWidth: '13rem',
-          minHeight: '100%',
-          backgroundColor: sectionId && sectionId >= 2? 'none' : 'lightgrey',
+           maxWidth: '20rem',
+          maxHeight: '20rem',
+          backgroundColor: sectionId && sectionId >= 2? 'none' : '#EDEDED',
           border: '1px black solid',
           display: 'flex',
           alignItems: 'flex-start',
@@ -44,19 +72,40 @@ const Boxes = ({ sectionId }: sectionType) => {
                       p: 2, 
           boxSizing: 'border-box'
                 
-              }}>
-              <Typography >
-                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum a, minima laboriosam, sit, explicabo nisi ipsum eveniet numquam odit rem et doloribus! Accusamus quisquam cumque ipsam hic totam, neque placeat.
-              </Typography>
-              <CheckBoxOutlineBlankIcon />
-              </Box>
+                        }}>
+                        
+                         <Box sx={{position: 'relative', left: -10, zIndex: 1 }}>
+                        <Avatar>
+                                <img src={purpose}
+                                alt="Purpose"
+                                    style={{ filter: sectionId &&  sectionId <= 3 ? 'grayscale(100%)' : 'none' }}
+                                />
+                        </Avatar>      
+                        </Box>
+
+              <Box sx={{ mt: 5}}>
+              <Typography variant='h4'sx={{align: 'center', mt: 5}} >
+              Purpose
+                            </Typography>
+                            <Typography variant='body2' sx={{align: 'center', mt: 10}}>
+                                The purpose of having Jolint in your company
+                            </Typography>
+                      </Box>
+                        
+                    
+                     <Box sx={{position: 'relative',  }}>
+                           {sectionId &&  sectionId >= 3 ? <CustomCheckbox1 /> : <CustomCheckbox2 />}
+                        </Box> 
+                    </Box>
           </Grid>
           <Grid item xs={12} sm={6} md={3} sx={{direction: "column", display: 'flex'}}>
-          <Box
-             sx={{
-          maxWidth: '13rem',
-          minHeight: '100%',
-          backgroundColor: sectionId && sectionId >= 3 ? 'none' : 'lightgrey',
+            <Box
+              id='6'
+             onClick={handleClickBox}
+              sx={{
+           maxWidth: '20rem',
+          maxHeight: '20rem',
+          backgroundColor: sectionId && sectionId >= 3 ? 'none' : '#EDEDED',
           border: '1px black solid',
           display: 'flex',
           alignItems: 'flex-start',
@@ -65,19 +114,38 @@ const Boxes = ({ sectionId }: sectionType) => {
                       p: 2,
                   boxSizing: 'border-box'
           
-              }}>
-              <Typography >
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt aliquid dolorum provident illo eos voluptatem at quia, laudantium dolor? Minus impedit atque possimus consequatur voluptas quis soluta! Possimus, ipsa tempora.
-              </Typography>
-              <CheckBoxOutlineBlankIcon />
+                        }}>
+                        
+                         <Box sx={{position: 'relative', left: -10, zIndex: 1 }}>
+                        <Avatar>
+                                <img src={yourRights}
+                                style={{ filter: sectionId &&  sectionId <= 2 ? 'grayscale(100%)' : 'none' }}
+                                />
+                        </Avatar>      
+                        </Box>
+
+               <Box sx={{ mt: 5}}>
+              <Typography variant='h4'sx={{align: 'center', mt: 5}} >
+              Your Rights
+                            </Typography>
+                            <Typography variant='body2' sx={{align: 'center', mt: 10}}>
+                                Your rights with the processing of your personal data
+                            </Typography>
+                      </Box>
+                        
+                        <Box sx={{position: 'relative',  }}>
+                           {sectionId &&  sectionId >= 4 ? <CustomCheckbox1 /> : <CustomCheckbox2 />}
+                        </Box> 
               </Box>
           </Grid>
           <Grid item xs={12} sm={6} md={3} sx={{direction: "column", display: 'flex'}}>
-          <Box
+            <Box
+              id='10'
+             onClick={handleClickBox}
              sx={{
-          maxWidth: '13rem',
-          minHeight: '100%',
-          backgroundColor: sectionId && sectionId >= 4 ? 'none' : 'lightgrey',
+           maxWidth: '20rem',
+          maxHeight: '20rem',
+          backgroundColor: sectionId && sectionId >= 4 ? 'none' : '#EDEDED',
           border: '1px black solid',
           display: 'flex',
           alignItems: 'flex-start',
@@ -86,11 +154,29 @@ const Boxes = ({ sectionId }: sectionType) => {
                       p: 2,
                   boxSizing: 'border-box'
           
-              }}>
-              <Typography >
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium excepturi maiores debitis fugit! Nesciunt impedit qui quod aliquid tempore eligendi similique, asperiores ut cum id molestias, ad esse quae incidunt.
-              </Typography>
-              <CheckBoxOutlineBlankIcon />
+                        }}>
+                        
+                         <Box sx={{position: 'relative', left: -10, zIndex: 1 }}>
+                        <Avatar>
+                                <img src={consent}
+                                style={{ filter: sectionId &&  sectionId <= 3 ? 'grayscale(100%)' : 'none' }}
+                                />
+                        </Avatar>      
+                        </Box>
+
+             <Box sx={{ mt: 5}}>
+              <Typography variant='h4'sx={{align: 'center', mt: 5}} >
+              Consent
+                            </Typography>
+                            <Typography variant='body2' sx={{align: 'center', mt: 10}}>
+                                Sign to improve inclusion and belonging in your company
+                            </Typography>
+                      </Box>
+
+
+                        <Box sx={{position: 'relative',  }}>
+                           {sectionId &&  sectionId >= 5 ? <CustomCheckbox1 /> : <CustomCheckbox2 />}
+                        </Box> 
               </Box>
               </Grid>
             </Grid>
