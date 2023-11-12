@@ -1,8 +1,7 @@
 
 import Layout from './components/Layout';
+import FormContent from './pages/FormContent';
 import './App.css'
-import { FormContent } from './pages/FormContent';
-
 
 
 
@@ -14,7 +13,7 @@ function App() {
 
 
     <Layout>
-      <FormContent /> 
+  <FormContent /> 
       </Layout>
 
   )

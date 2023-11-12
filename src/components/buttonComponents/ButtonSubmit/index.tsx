@@ -1,4 +1,4 @@
-import { Button } from "@mui/material";
+import { Box, Button } from "@mui/material";
 
 interface handleNextProps {
   handleNextPage: () => void
@@ -11,14 +11,14 @@ export default function index({handleNextPage}: handleNextProps) {
     }
     
   return (
-      <div>
+      <Box sx={{m: 5}}>
           <Button  onClick={handleSubmit}
         variant='contained'
         size="large"
-        sx={{ background: '#CB7CAC', width: 175, height: 55, borderRadius: 2, m: 5}}
+        sx={{ background: '#CB7CAC', width: 175, height: 55, borderRadius: 2, boxShadow: 2 }}
       >
           Submit
         </Button>
-    </div>
+    </Box>
   )
 }

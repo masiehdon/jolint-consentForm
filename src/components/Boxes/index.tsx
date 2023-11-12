@@ -19,25 +19,26 @@ const Boxes: React.FC<BoxesProps> = ({ sectionId, handleClickBox }) => {
   
       
     return (
-      <Box sx={{ width: '100vw', mr: 2}}>
-            <Grid container spacing={2}>
+      // <Box sx={{ width: '100', mr: 2, align: 'center', overflowX: 'hidden'}}>
+            <Grid container spacing={2} sx={{p: 1, justifyContent: 'center, '}}>
                 
-          <Grid item xs={12} sm={6} md={3} sx={{direction: "column", display: 'flex'}}>
+          <Grid item xs={12} sm={6} md={6} lg={3} sx={{direction: "column", display: 'flex'}}>
             <Box
               id='1'
               onClick={handleClickBox}
              sx={{
-          maxWidth: '20rem',
-          maxHeight: '20rem',
+          width: '25rem',
+          minHeight: '20rem',
           border: '1px black solid',
           display: 'flex',
           alignItems: 'flex-start',
                 justifyContent: 'space-between',
                       m: 2,
-                      p: 2,
-                            boxSizing: 'border-box',
+               p: 2,
+                      borderRadius: 3,
+          boxShadow: 10
                         }}>
-                        <Box sx={{position: 'relative', left: -5, zIndex: 1 }}>
+                        <Box sx={{position: 'relative' }}>
                         <Avatar>
                                 <img src={intro} />
                         </Avatar>      
@@ -56,25 +57,27 @@ const Boxes: React.FC<BoxesProps> = ({ sectionId, handleClickBox }) => {
               </Box>
                 </Grid>
                 
-          <Grid item xs={12} sm={6} md={3} sx={{direction: "column", display: 'flex'}}>
+          <Grid item xs={12} sm={6} md={6} lg={3} sx={{direction: "column", display: 'flex'}}>
             <Box
               id='4'
               onClick={handleClickBox}
              sx={{
-           maxWidth: '20rem',
-          maxHeight: '20rem',
+          width: '25rem',
+          minHeight: '20rem',
           backgroundColor: sectionId && sectionId >= 2? 'none' : '#EDEDED',
           border: '1px black solid',
           display: 'flex',
           alignItems: 'flex-start',
           justifyContent: 'space-between',
           m: 2,
-                      p: 2, 
-          boxSizing: 'border-box'
+               p: 2,
+                      borderRadius: 3,
+               boxShadow: 10,
+                 
                 
                         }}>
                         
-                         <Box sx={{position: 'relative', left: -10, zIndex: 1 }}>
+                         <Box sx={{position: 'relative', left: -10 }}>
                         <Avatar>
                                 <img src={purpose}
                                 alt="Purpose"
@@ -98,25 +101,26 @@ const Boxes: React.FC<BoxesProps> = ({ sectionId, handleClickBox }) => {
                         </Box> 
                     </Box>
           </Grid>
-          <Grid item xs={12} sm={6} md={3} sx={{direction: "column", display: 'flex'}}>
+          <Grid item xs={12} sm={6} md={6} lg={3} sx={{direction: "column", display: 'flex'}}>
             <Box
               id='6'
              onClick={handleClickBox}
               sx={{
-           maxWidth: '20rem',
-          maxHeight: '20rem',
+          width: '25rem',
+          minHeight: '20rem',
           backgroundColor: sectionId && sectionId >= 3 ? 'none' : '#EDEDED',
           border: '1px black solid',
           display: 'flex',
           alignItems: 'flex-start',
           justifyContent: 'space-between',
                   m: 2,
-                      p: 2,
-                  boxSizing: 'border-box'
-          
+                p: 2,
+                      borderRadius: 3,
+          boxShadow: 10
+                       
                         }}>
                         
-                         <Box sx={{position: 'relative', left: -10, zIndex: 1 }}>
+                         <Box sx={{position: 'relative', left: -10}}>
                         <Avatar>
                                 <img src={yourRights}
                                 style={{ filter: sectionId &&  sectionId <= 2 ? 'grayscale(100%)' : 'none' }}
@@ -138,25 +142,26 @@ const Boxes: React.FC<BoxesProps> = ({ sectionId, handleClickBox }) => {
                         </Box> 
               </Box>
           </Grid>
-          <Grid item xs={12} sm={6} md={3} sx={{direction: "column", display: 'flex'}}>
+          <Grid item xs={12} sm={6} md={6} lg={3} sx={{direction: "column", display: 'flex'}}>
             <Box
               id='10'
              onClick={handleClickBox}
              sx={{
-           maxWidth: '20rem',
-          maxHeight: '20rem',
+           width: '25rem',
+          minHeight: '20rem',
           backgroundColor: sectionId && sectionId >= 4 ? 'none' : '#EDEDED',
           border: '1px black solid',
           display: 'flex',
           alignItems: 'flex-start',
           justifyContent: 'space-between',
                   m: 2,
-                      p: 2,
-                  boxSizing: 'border-box'
+               p: 2,
+               borderRadius: 3,
+          boxShadow: 10
           
                         }}>
                         
-                         <Box sx={{position: 'relative', left: -10, zIndex: 1 }}>
+                         <Box sx={{position: 'relative', left: -10 }}>
                         <Avatar>
                                 <img src={consent}
                                 style={{ filter: sectionId &&  sectionId <= 3 ? 'grayscale(100%)' : 'none' }}
@@ -180,7 +185,7 @@ const Boxes: React.FC<BoxesProps> = ({ sectionId, handleClickBox }) => {
               </Box>
               </Grid>
             </Grid>
-            </Box>
+            // </Box>
   )
 }
 

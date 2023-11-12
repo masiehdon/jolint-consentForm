@@ -1,12 +1,12 @@
-import { Avatar, Grid, Typography } from "@mui/material";
+import { Avatar, Box, Grid, Typography } from "@mui/material";
 import CheckCircleOutlineOutlinedIcon from '@mui/icons-material/CheckCircleOutlineOutlined';
 import ButtonClose from "../buttonComponents/ButtonClose";
 
 export default function ThankYou() {
   return (
-      <Grid container sx={{display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', mb: 25}}>
-          <Grid item xs={12} sx={{ display: 'flex', alignItems: 'center', mt: '8rem' }}>
-              
+      <Box sx={{minHeigh: '100vh' }}>
+          <Grid container >
+              <Grid item xs={12} sx={{alignItems: 'center', justifyContent: 'center', display: 'flex'}}>
               <Avatar  sx={{ width: 75, height: 75, }}>
               <CheckCircleOutlineOutlinedIcon sx={{fontSize: 90, backgroundColor: 'green', size: 'xx-large'}} /> 
               </Avatar> 
@@ -23,17 +23,20 @@ export default function ThankYou() {
               }}>
                   Thank You!
               </Typography>
-          </Grid>
-          <Grid item xs={12}>
+         </Grid>
+         <Grid item xs={12} sx={{alignItems: 'center', justifyContent: 'center', display: 'flex'}} >
               <Typography variant="h6" sx={{m: '5rem', fontWeight: 'bolder'}}>
                   Your consent form was successfully submitted. We appreciate your collaboration. Thank you!
               </Typography>
-              <Grid item xs={12} sx={{display: 'flex', alignItems: 'center', justifyContent: 'center'}} >
-                  <ButtonClose />
               </Grid>
-              
-          </Grid>
-         
-    </Grid>
+              <Grid item xs={12} sx={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+  <ButtonClose /> 
+</Grid>
+
+                  
+   </Grid>         
+   </Box>      
+ 
   )
 }
+
