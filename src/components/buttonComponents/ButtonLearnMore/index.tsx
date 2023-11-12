@@ -8,7 +8,7 @@ export default function index() {
       <Button
         variant="contained"
          size="large"
-          sx={{ background: '#2C3386', width: 175, height: 55, borderRadius: 2}}
+          sx={{ background: '#2C3386', width: 175, height: 55, borderRadius: 2, boxShadow: 2}}
       >
        Learn More
         </Button>

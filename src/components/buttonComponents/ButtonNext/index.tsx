@@ -12,7 +12,7 @@ export default function index({ handleNextPage }: NextProps) {
         variant="contained"
         onClick={handleNextPage}
         size="large"
-          sx={{ background: '#2C3386', width: 175, height: 55, borderRadius: 2}}
+          sx={{ background: '#2C3386', width: 175, height: 55, borderRadius: 2, boxShadow: 2}}
       >
         Next
         </Button>

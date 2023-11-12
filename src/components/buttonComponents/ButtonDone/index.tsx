@@ -6,11 +6,11 @@ handleNextPage: () => void
 
 export default function index({ handleNextPage }: DoneProps) {
   return (
-      <Box>
+      <Box sx={{m: 5}}>
           <Button
               variant="contained"
           size="large"
-              sx={{ background: '#2C3386', width: 175, height: 55, borderRadius: 2, m: 5 }}
+              sx={{ background: '#2C3386', width: 175, height: 55, borderRadius: 2, boxShadow: 2}}
               onClick={handleNextPage}
           >
               Done
