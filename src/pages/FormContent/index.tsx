@@ -25,8 +25,8 @@ interface SectionType {
 const textStyle: React.CSSProperties = {
   maxWidth: '65%', 
   overflowWrap: 'break-word',
-  marginLeft: 3
-};
+  marginLeft: 3,
+  };
 
 const FormContent = () => {
   const [currentPageIndex, setCurrentPageContent] = useState<number>(0);
@@ -72,7 +72,7 @@ const handlePreviousPage = () => {
           sx={{p: 2}}
           
         >
-          <Grid item xs={12} sx={{ width: '100vw'}}>
+          <Grid item xs={12} sx={{ width: '100vw',}}>
             <Typography variant="h4">
               {formData[currentPageIndex].index
                 ? `${formData[currentPageIndex].index}. ${formData[currentPageIndex].title}`
@@ -177,10 +177,11 @@ const handlePreviousPage = () => {
       
       {formData[currentPageIndex].sectionId == 1 && (
         <Grid container sx={{ display: 'flex' }}>
-          <Grid item xs={12} sm={4} md={3} lg={2} alignItems={"center"} justifyContent={'center'} sx={{display: 'flex'}}>
+          <Grid item xs={12} sm={4} md={3} lg={2} alignItems={"center"} justifyContent={'center'} sx={{display: 'flex',}}>
             <ButtonPrevious handlePreviousPage={handlePreviousPage} /> 
           </Grid>
-          <Grid item xs={12} sm={4} md={3} lg={2} alignItems={"center"} justifyContent={'center'} sx={{display: 'flex'}}>
+          <Grid item xs={12} sm={4} md={3} lg={2} alignItems={"center"} justifyContent={'center'} sx={{
+            display: 'flex', py: {xs: 0}, m: {xs: 0}}}>
             <ButtonLearnMore />
           </Grid>
         </Grid> 
