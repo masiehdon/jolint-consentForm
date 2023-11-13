@@ -4,7 +4,7 @@ import { Button, Box } from "@mui/material";
 
 export default function index() {
   return (
-    <Box sx={{m: 5}}>
+    <Box sx={{m: 5, py: {xs: 0, sm: 0}, mt: {xs: 0}, mb: {xs: 2, sm: 2}}}>
       
       <Button
         variant="contained"

@@ -10,7 +10,7 @@ export default function Form() {
     <Box
       component="form"
       sx={{
-        '& > :not(style)': { m: 1,ml: '2rem', width: '25ch', mb: 3 },
+        '& > :not(style)': { m: 1,ml: '2rem', width: '25ch', mb: 3, justifyContent: {xs: 'center', sm: 'center'}, alignItems: {xs: 'center', sm: 'center'}, display: {xs: 'flex', sm: 'flex'} },
       }}
       noValidate
           autoComplete="off">
